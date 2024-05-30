@@ -7,9 +7,19 @@
 
 // const nomDeMaFonction = (paramètre) => {
 //   // Code de ma fonction
+function multipy(a, b) {
+  return a * b;
+}
+let result = multipy(3, 2) * 2;
+console.log(result);
+
+//ou
+//const multiply = (a, b) => a * b;
+//let result = multiply(3, 2) * 2;
+//console.log(result);
+
 // }
 // console.log(nomDeMaFonction(On remplace le paramètre par ce qu'on désire)) //
-
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 2
@@ -19,8 +29,8 @@
 // Pour rappel pour accéder à un élément d'un tableau on utilise la méthode [laplaceDuNombreDeL'élément] :
 // const monTableau = [1, 2, 3]
 // console.log(monTableau[0]) // 1
-
-
+const fruits = ["Banane", "Poire", "Pomme"];
+console.log(fruits[0]);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 3
@@ -32,7 +42,9 @@
 // monTableau.pop()
 // console.log(monTableau) // [1, 2]
 
-
+const fruits = ["Banane", "Poire", "Pomme"];
+fruits.pop();
+console.log(fruits);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -44,8 +56,14 @@
 // for (let i = 0; i < monTableau.length; i++) {
 //   console.log(monTableau[i]) // 1, 2, 3
 // }
+const numberadd = [1, 2, 5, 8];
+let sum = 0;
 
+for (let i = 0; i < numberadd.length; i++) {
+  sum += numberadd[i];
+}
 
+console.log(sum);
 
 //----------------------------------------------------------------------------------------------//
 
@@ -60,7 +78,6 @@
 // console.log(monTableauInverse) // ["o", "l", "l", "e", "H"]
 //Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
 
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 6
@@ -70,8 +87,6 @@
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 7
@@ -80,8 +95,6 @@
 // Pour cette exercice on va utiliser la méthode Math.min() qui permet de retourner le plus petit nombre d'un tableau :
 // const monTableau = [1, 2, 3]
 // console.log(Math.min(...monTableau)) // 1
-
-
 
 //----------------------------------------------------------------------------------------------//
 
@@ -97,8 +110,6 @@
 //   return element !== "e" && element !== "o"
 // })
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 9
@@ -108,8 +119,6 @@
 // Pour cette exercice on va utiliser la méthode sort() qui permet de trier un tableau :
 // const monTableau = [1, 3, 2]
 // console.log(monTableau.sort()) // [1, 2, 3]
-
-
 
 //----------------------------------------------------------------------------------------------//
 
@@ -126,8 +135,6 @@
 // }
 // console.log(monTableau) // ["Hello", "elloH", "lloHe", "loHel", "oHell"]
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 11
@@ -140,7 +147,6 @@
 //   return element + 1
 // })
 
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 12
@@ -152,7 +158,6 @@
 // const monTableauLongueur = monTableau.map((element) => {
 //   return element.length
 // })
-
 
 //----------------------------------------------------------------------------------------------//
 
@@ -167,8 +172,6 @@
 //   return element.charAt(0)
 // })
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 14
@@ -177,8 +180,6 @@
 // Exemple : ["Hello", "World"] => ["o", "d"]
 // Indice regarde l'exercice 13, c'est exactement la même chose sauf qu'il faut récupérer la dernière lettre et non la première.
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 15
@@ -186,8 +187,6 @@
 // Crée une fonction qui prend en paramètre un tableau de string et qui doit renvoyer tout les string qui ont une longueur de 5 caractères ou plus.
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la longueur de la string. Incice : la méthode length() permet de récupérer la longueur d'une string.
-
-
 
 //----------------------------------------------------------------------------------------------//
 
@@ -201,8 +200,6 @@
 //   return accumulateur + element
 // }, 0)
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 17
@@ -215,8 +212,6 @@
 // const monTableauConcat = monTableau1.concat(monTableau2)
 // console.log(monTableauConcat) // ["Hello", "World", "Test", "Salut"]
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 18
@@ -225,8 +220,6 @@
 // Exemple : ["Poulet", "Chat", "Chien", "Cheval"] => ["Poulet", "Chien", "Cheval"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la présence de la lettre "e". Indice : la méthode includes() permet de savoir si une string contient une lettre ou un mot.
 
-
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 19
@@ -234,8 +227,6 @@
 // Crée une fonction qui prend en paramètre un tableau de nombre et qui doit retourner tout les nombres qui sont pairs par ordre croissant.
 // Exemple : [ 2, 9, 6, 5, 6] => [2, 6, 6]
 // Indice : il y a plusieurs façon de faire, soit avec un for, soit avec la méthode filter() une fois ça fait utilise la méthode sort() qui permet de trier un tableau.
-
-
 
 //----------------------------------------------------------------------------------------------//
 
@@ -249,13 +240,9 @@
 // findShort("Prachett is the best author in the world ") // 2
 // findShort("The quick brown fox jumps over the lazy dog") // 3
 
-
-
 // EXERCICE 21
 
 //Écrivez une fonction `anagram` qui prend deux chaînes et renvoie un booléen indiquant si les chaînes sont des anagrammes l'une de l'autre. Deux chaînes sont des anagrammes l'une de l'autre si elles contiennent les caractères, quel que soit l'ordre des caractères. Par exemple, "listen" et "silent" sont des anagrammes l'une de l'autre
-
-
 
 // EXERCICE 22
 
@@ -264,15 +251,11 @@
 // removeDoubleLetters("google") // "gogle"
 // removeDoubleLetters("Hello World!") // "Helo World!"
 
-
-
 // EXERCICE 23
 
 //Écrivez une fonction qui prend un tableau de 10 entiers (entre 0 et 9) et renvoie une chaîne de caractères sous la forme d'un numéro de téléphone.
 // Exemple :
 // createPhoneNumber([1,2,3,4,5,6,7,8,9,0]) // "(123) 456-7890"
-
-
 
 // EXERCICE 24
 
@@ -284,16 +267,12 @@
 // Indice 2 : Vous pouvez utiliser la méthode fromCharCode() pour récupérer un caractère à partir de son code unicode.  Exemple : String.fromCharCode(65) renvoie "A". Mais attention à refaire la boucle dans l'autre sens pour pouvoir comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants.
 // Indice 3 : Il y a plus cas comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants pour trouver le caractère manquant avec une condition if. Et retourner le caractère manquant avec un return et la méthode fromCharCode().
 
-
-
 // EXERCICE 25
 
 //Écrivez une fonction qui prend un tableau de string et renvoie un tableau de string triées par ordre alphabétique.
 // Exemple :
 // sortString(["Banana", "Orange", "Apple", "Mango"]) // ["Apple", "Banana", "Mango", "Orange"]
 // sortString(["lait", "beurre", "fromage", "yaourt"]) // ["beurre", "fromage", "lait", "yaourt"]
-
-
 
 // EXERCICE 26
 // Écris une fonction qui étant donné deux angles d'un triangle renvoie la mesure du troisième angle.
@@ -303,8 +282,6 @@
 // otherAngle(60, 60) // 60
 // Indice : Pour trouver le troisième angle, tu dois soustraire la somme des deux angles donnés à 180 degrés.
 
-
-
 // EXERCICE 27
 // Écris une fonction qui peut déterminer si une année est une année bissextile ou non. Elle doit renvoyer true si c'est le cas, sinon false.
 // ( Rappel : Une année bissextile est une année contenant 366 jours au lieu de 365. Elle est donc plus longue qu'une année normale. Une année bissextile a lieu tous les 4 ans. )
@@ -313,20 +290,13 @@
 // isLeapYear(2021) // false
 // Indice : Pour savoir ça tu peux utiliser le modulo. Si une année est divisible par 4 et que le reste de la division est égal à 0, alors c'est une année bissextile.
 
-
-
 // EXERCICE 28
 
 // Voici un example de tableau d'animaux. Écris une fonction qui à partir d'un tableau similaire reçu en paramètre renvoie un nouveau tableau qui lui même contient deux sous-tableaux. Le premier sous-tableau doit contenir les animaux domestiques et le second les animaux sauvages. Les animaux domestiques doivent être triés par ordre alphabétique et les animaux sauvages par ordre alphabétique inversé.
 
-
-
 // Exemple :
 // sortAnimals(animals) // [["Cat", "Dog", "Donkey", "Pigeon", "Turtle"], ["Eagle", "Monkey", "Panda", "Crocodile"]]
 // Indice : Oubliez pas que tu peux créer des variables qui contiennent des tableaux vides et que tu peux ajouter des éléments à un tableau avec la méthode push(). Mais vu que tu dois analyser le tableau d'animaux pour le trier, tu dois utiliser une boucle et faire des conditions if pour savoir si l'animal est domestique ou sauvage. Et tu dois trier les animaux domestiques par ordre alphabétique et les animaux sauvages par ordre alphabétique inversé. Pour trier un tableau par ordre alphabétique tu peux utiliser la méthode sort(). Pour trier un tableau par ordre alphabétique inversé tu peux utiliser la méthode reverse().
-
-
-
 
 // EXERCICE 29
 
@@ -346,8 +316,6 @@
 
 // Indice : Tu dois utiliser deux boucles imbriquées pour créer les sous-tableaux. La première boucle doit parcourir les colonnes et la seconde boucle doit parcourir les sièges de chaque colonne.
 
-
-
 // EXERCICE 30
 
 /*
@@ -364,8 +332,6 @@ Pour exemple, si ta fonction recevait le tableau ci-dessous en paramètre, tu de
 */
 //Indice : Tu dois utiliser une boucle for pour parcourir le tableau et une condition if pour savoir si notre équipe a gagné, perdu ou fait match nul. Et tu dois ajouter les points de chaque match à une variable score qui doit être initialisée à 0. Et tu dois retourner la variable score à la fin de la fonction.
 
-
-
 // EXERCICE 31
 
 /*
@@ -379,13 +345,9 @@ sumArr( ["2", "7", "3", "8", "2"], ["2", "4", "9"] ) should return ["4", "11", "
 sumArr( ["2", "5", "3"], ["2", "4", "9", "5", "5"] ) should return ["4", "9", "12", "5", "5"]
 */
 
-
-
 // EXERCICE 32
 
 // Écris une fonction generatedCharacter qui crée de manière aléatoires des personnages donjon et dragon avec une classe et des noms de personnages. La fonction doit renvoyer un tableau de personnages.
-
-
 
 //----------------------------------------------------------------------------------------------//
 
@@ -396,15 +358,12 @@ sumArr( ["2", "5", "3"], ["2", "4", "9", "5", "5"] ) should return ["4", "9", "1
 // Exemple du résultat attendu :
 // filterDuplicate([1, 2, 2, 3, 4, 4, 5]) // [1, 2, 3, 4, 5]
 
-
-
 // EXERCICE 34
 
 // Écrivez une fonction judgeFaces qui prend un tableau de grimaces représentées par des chaînes de caractères Emoji en entrée et renvoie un objet avec les scores pour chaque type de grimace. Vous devez utiliser la méthode map et la méthode reduce
 
 // Exemple du résultat attendu :
 // judgeFaces(["😀", "😂", "😄", "😂", "😁", "😂", "😄", "😀"]) // { '😀': 10, '😁': 4, '😂': 9, '😃': 0, '😄': 2 }
-
 
 // EXERCICE 35
 
@@ -418,4 +377,3 @@ sumArr( ["2", "5", "3"], ["2", "4", "9", "5", "5"] ) should return ["4", "9", "1
 // Exemple :
 
 // [  "2♠", "3♠", "4♠", "5♠", "6♠", "7♠", "8♠", "9♠", "10♠", "J♠", "Q♠", "K♠", "A♠",  "2♥", "3♥", "4♥", "5♥", "6♥", "7♥", "8♥", "9♥", "10♥", "J♥", "Q♥", "K♥", "A♥",  "2♦", "3♦", "4♦", "5♦", "6♦", "7♦", "8♦", "9♦", "10♦", "J♦", "Q♦", "K♦", "A♦",  "2♣", "3♣", "4♣", "5♣", "6♣", "7♣", "8♣", "9♣", "10♣", "J♣", "Q♣", "K♣", "A♣"]
-
