@@ -77,6 +77,13 @@ console.log(sum);
 // const monTableauInverse = monTableau.reverse()
 // console.log(monTableauInverse) // ["o", "l", "l", "e", "H"]
 //Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
+const maString = "Hello";
+const monTableau = maString.split("");
+console.log(monTableau);
+const monTableauInverse = monTableau.reverse();
+console.log(monTableauInverse);
+const inverseString = monTableauInverse.join("");
+console.log(inverseString);
 
 //----------------------------------------------------------------------------------------------//
 
@@ -86,6 +93,13 @@ console.log(sum);
 // Pour cette exercice on va utiliser la méthode Math.max() qui permet de retourner le plus grand nombre d'un tableau :
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
+
+function hightNumber(numbers) {
+  return Math.max(...numbers);
+}
+
+const chiffres = [2, 5, 15, 35, 12];
+console.log(hightNumber(chiffres));
 
 //----------------------------------------------------------------------------------------------//
 
