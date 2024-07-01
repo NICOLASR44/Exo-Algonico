@@ -7,11 +7,11 @@
 
 // const nomDeMaFonction = (paramètre) => {
 //   // Code de ma fonction
-function multipy(a, b) {
-  return a * b;
-}
-let result = multipy(3, 2) * 2;
-console.log(result);
+// function multipy(a, b) {
+//   return a * b;
+// }
+// let result = multipy(3, 2) * 2;
+// console.log(result);
 
 //ou
 //const multiply = (a, b) => a * b;
@@ -29,8 +29,8 @@ console.log(result);
 // Pour rappel pour accéder à un élément d'un tableau on utilise la méthode [laplaceDuNombreDeL'élément] :
 // const monTableau = [1, 2, 3]
 // console.log(monTableau[0]) // 1
-const fruits = ["Banane", "Poire", "Pomme"];
-console.log(fruits[0]);
+//const fruits = ["Banane", "Poire", "Pomme"];
+//console.log(fruits[0]);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 3
@@ -38,13 +38,13 @@ console.log(fruits[0]);
 // Crée une fonction qui prend en paramètre un tableau et qui doit supprimer le dernier élément du tableau.
 // Exemple : [1, 2, 3] => [1, 2]
 // Pour rappel pour supprimer le dernier élément d'un tableau on utilise la méthode pop():
-// const monTableau = [1, 2, 3]
-// monTableau.pop()
-// console.log(monTableau) // [1, 2]
+// const monTableau = [1, 2, 3];
+// monTableau.pop();
+// console.log(monTableau); // [1, 2]
 
-const fruits = ["Banane", "Poire", "Pomme"];
-fruits.pop();
-console.log(fruits);
+// const fruits = ["Banane", "Poire", "Pomme"];
+// fruits.pop();
+// console.log(fruits);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -56,14 +56,16 @@ console.log(fruits);
 // for (let i = 0; i < monTableau.length; i++) {
 //   console.log(monTableau[i]) // 1, 2, 3
 // }
-const numberadd = [1, 2, 5, 8];
-let sum = 0;
 
-for (let i = 0; i < numberadd.length; i++) {
-  sum += numberadd[i];
-}
-
-console.log(sum);
+// const monTableau = [1, 2, 3];
+// const someArray = (arrayNumber) => {
+//   let resultSome = 0;
+//   for (let i = 0; i < monTableau.length; i++) {
+//     resultSome = resultSome + arrayNumber[i];
+//   }
+//   return resultSome;
+// };
+// console.log(someArray(monTableau));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -71,19 +73,14 @@ console.log(sum);
 //Crée une fonction qui prend en paramètre une string et qui doit retourner la string inversée.
 // Exemple : "Hello" => "olleH"
 // Pour cette exercice on va utiliser la méthode split() qui permet de transformer une string en tableau. Et la méthode reverse() qui permet d'inverser un tableau :
-// const maString = "Hello"
-// const monTableau = maString.split("")
-// console.log(monTableau) // ["H", "e", "l", "l", "o"]
-// const monTableauInverse = monTableau.reverse()
-// console.log(monTableauInverse) // ["o", "l", "l", "e", "H"]
-//Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
-const maString = "Hello";
-const monTableau = maString.split("");
-console.log(monTableau);
-const monTableauInverse = monTableau.reverse();
-console.log(monTableauInverse);
-const inverseString = monTableauInverse.join("");
-console.log(inverseString);
+// const maString = "Hello";
+// const monTableau = maString.split("");
+// console.log(monTableau); // ["H", "e", "l", "l", "o"]
+// const monTableauInverse = monTableau.reverse();
+// console.log(monTableauInverse); // ["o", "l", "l", "e", "H"]
+// // Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
+// const maStringinverse = monTableauInverse.join("");
+// console.log(maStringinverse);
 
 //----------------------------------------------------------------------------------------------//
 
@@ -94,12 +91,12 @@ console.log(inverseString);
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
 
-function hightNumber(numbers) {
-  return Math.max(...numbers);
-}
+// function hightNumber(numbers) {
+//   return Math.max(...numbers);
+// }
 
-const chiffres = [2, 5, 15, 35, 12];
-console.log(hightNumber(chiffres));
+// const chiffres = [2, 5, 15, 35, 125];
+// console.log(hightNumber(chiffres));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -109,6 +106,13 @@ console.log(hightNumber(chiffres));
 // Pour cette exercice on va utiliser la méthode Math.min() qui permet de retourner le plus petit nombre d'un tableau :
 // const monTableau = [1, 2, 3]
 // console.log(Math.min(...monTableau)) // 1
+
+// function minNumber(numbers) {
+//   return Math.min(...numbers);
+// }
+
+// const chiffres = [2, 5, 1, 35, 125];
+// console.log(minNumber(chiffres));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -124,6 +128,18 @@ console.log(hightNumber(chiffres));
 //   return element !== "e" && element !== "o"
 // })
 
+// const maString = "Hello";
+// const monTableau = maString.split("");
+// console.log(monTableau);
+
+// const monTableauFiltre = monTableau.filter((element) => {
+//   return element !== "e" && element !== "o";
+// });
+// console.log(monTableauFiltre);
+
+// const maStringFiltre = monTableauFiltre.join("");
+// console.log(maStringFiltre);
+
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 9
@@ -133,6 +149,9 @@ console.log(hightNumber(chiffres));
 // Pour cette exercice on va utiliser la méthode sort() qui permet de trier un tableau :
 // const monTableau = [1, 3, 2]
 // console.log(monTableau.sort()) // [1, 2, 3]
+
+const monTableau = [8, 9, 15, 1, 74];
+console.log(monTableau.sort());
 
 //----------------------------------------------------------------------------------------------//
 
@@ -303,6 +322,22 @@ console.log(hightNumber(chiffres));
 // isLeapYear(2020) // true
 // isLeapYear(2021) // false
 // Indice : Pour savoir ça tu peux utiliser le modulo. Si une année est divisible par 4 et que le reste de la division est égal à 0, alors c'est une année bissextile.
+
+// function anneeBissextile(annee) {
+//   if ((annee % 4 === 0 && annee % 100 !== 0) || annee % 400 === 0) {
+//     console.log("bissextile");
+//     return true;
+//   } else {
+//     console.log("Non Bissextile");
+//     return false;
+//   }
+// }
+// console.log(`2004: ${anneeBissextile(2044)}`);
+// console.log(`2016: ${anneeBissextile(2066)}`);
+// console.log(`2020: ${anneeBissextile(2020)}`);
+// console.log(`1900: ${anneeBissextile(1900)}`);
+// console.log(`2000: ${anneeBissextile(2000)}`);
+// console.log(`2021: ${anneeBissextile(2021)}`);
 
 // EXERCICE 28
 
